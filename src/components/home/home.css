@@ -1,0 +1,103 @@
+@import '../variables.css';
+
+.content-grid {
+  display: flex;
+  flex-direction: column;
+  padding: $padding;
+  h2 {
+    color: $link;
+    padding: 1.5rem 0 1rem;
+  }
+  img {
+    padding: 4rem 0 0;
+  }
+}
+
+.title {
+  text-align: right;
+  position: absolute;
+  top: 10rem;
+  right: 10rem;
+  z-index: 1000;
+  color: $black;
+  font-size: 5rem;
+}
+
+.small-title {
+  font-size: 1rem;
+  padding: 0 0.5rem 0 0;
+}
+
+.title2 {
+  font-size: 3.5rem;
+}
+
+.small-title2{
+  font-size: 1rem;
+}
+
+.content-grid > div:nth-child(1) {order: 1;}
+.content-grid > div:nth-child(2) {order: 2;}
+.content-grid > div:nth-child(3) {order: 3;}
+.content-grid > div:nth-child(4) {order: 4;}
+.content-grid > div:nth-child(5) {order: 5;}
+.content-grid > div:nth-child(6) {order: 6;}
+.content-grid > * {padding: 1rem;}
+
+
+/* ------ Media Queries ------- */
+
+@media screen and (min-width: 900px) {
+  
+  .content-grid > div:nth-child(1) {grid-area: a;}
+  .content-grid > div:nth-child(2) {grid-area: b;}
+  .content-grid > div:nth-child(3) {grid-area: c;}
+  .content-grid > div:nth-child(4) {grid-area: d;}
+  .content-grid > div:nth-child(5) {grid-area: e;}
+  .content-grid > div:nth-child(6) {grid-area: f;}
+  
+  .content-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+    "a a b"
+    "d c c"
+    "e e f";
+    align-items: flex-start;
+    grid-gap: 2rem;
+  }
+
+  .content-grid {
+    img {
+      padding: 1.8rem 0 0;
+    }
+  }
+}
+
+@media screen and (max-width:640px) {
+  .title {
+    display: none;
+  }
+}
+
+@media screen and (min-width:640px) and (max-width:1080px) {
+  .title {
+    text-align: right;
+    position: absolute;
+    top: 10rem;
+    right: 5rem;
+    z-index: 1000;
+    color: $black;
+    font-size: 3rem;
+  }
+
+  .title2 {
+    display: none;
+  }
+}
+
+@media screen and (min-width:1080px) {
+  .title2 {
+    display: none;
+  }
+}
