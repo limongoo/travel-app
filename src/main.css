@@ -5,8 +5,9 @@ html {height: 100%;}
 body {
   font-family: 'Work Sans', sans-serif;
   font-weight: 400;
-  color: $dark;
+  color: $white;
   min-height: 100%;
+  background: $black;
 }
 
 p {
@@ -21,8 +22,8 @@ h1, h2, h3, h4 {
   letter-spacing: 2px;
   text-transform: uppercase;
   padding: 0 0 1rem 0;
-  color: $accent;
-  font-weight: 600;
+  color: $white;
+  font-weight: 700;
   font-family: 'Trirong', serif;
 }
 
@@ -57,7 +58,7 @@ a {
   color: $link;
   transition: 0.3s ease all;
   padding: 0 0 3px;
-  border-bottom: 3px solid $white;
+  border-bottom: 3px solid $black;
 }
 
 a:hover {
