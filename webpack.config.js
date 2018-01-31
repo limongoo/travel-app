@@ -6,7 +6,7 @@ module.exports = {
   entry: './src/main.js',
   output: {
     filename: 'bundle.js',
-    path: `${__dirname}/build`,
+    path: `${__dirname}/docs`,
   },
   devtool: 'inline-source-map',
   plugins: [
