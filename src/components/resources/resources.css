@@ -1,0 +1,104 @@
+@import '../variables.css';
+
+.hero-resource {
+  text-align: center;
+  position: absolute;
+  top: 10rem;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0 auto;
+  z-index: 1000;
+}
+
+.title-resource {
+  color: $black;
+  font-size: 4rem;
+}
+
+.small-title-resource {
+  font-size: 1rem;
+  padding: 0 0.5rem 0 0;
+  color: $black;
+}
+
+.ul-resource {
+  margin: 0 0 0 1rem;
+  li {
+    padding: 0.8rem 0;
+    list-style-type: circle;
+    a {
+      color: $white;
+      transition: 0.3s ease all;
+      &:hover {
+        color: $link;
+        margin: 0 0 0 0.5rem;
+      }
+    }
+    
+  }
+}
+
+.resource-grid {
+  padding: $padding;
+  h3 {
+    color: $link;
+    padding: 1.5rem 0 1rem;
+  }
+  img {
+    padding: 4rem 0 0;
+  }
+}
+
+.resource-grid > div:nth-child(1) {order: 1;}
+.resource-grid > div:nth-child(2) {order: 2;}
+.resource-grid > div:nth-child(3) {order: 3;}
+.resource-grid > div:nth-child(4) {order: 4;}
+.resource-grid > * {padding: 1rem;}
+
+@media screen and (min-width: 1000px) {
+  .resource-grid > div:nth-child(1) {grid-area: a;}
+  .resource-grid > div:nth-child(2) {grid-area: b;}
+  .resource-grid > div:nth-child(3) {grid-area: c;}
+  .resource-grid > div:nth-child(4) {grid-area: d;}
+  
+  .resource-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+    "a a a"
+    "b c d";
+    align-items: flex-start;
+    grid-gap: 2rem;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .hero-resource1 {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .hero-resource {
+    top: 7rem;
+    .title-resource {
+      font-size: 3rem;
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .hero-resource {
+    display: none;
+  }
+
+  .hero-resource1 {
+    .title-resource {
+      color: $white;
+      font-size: 3rem;
+    }
+    .small-title-resource {
+      color: $white;
+    }
+  }
+}
